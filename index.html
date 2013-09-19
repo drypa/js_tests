@@ -1,8 +1,30 @@
-﻿<html ng-app='myApp'>
+﻿<html >
 <head>
     <script src="js/require.js" data-main="js/app"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js' type="text/javascript" ></script>
+    <script src="js/CartController.js" type="text/javascript" ></script>
 </head>
 <body>
     <div class='hello'></div>
+    <br />
+    <div ng-app='helloWorldApp'>
+        <div ng-controller='CartController'>
+            <div ng-repeat='item in items'>
+                <input type="text" ng-model='item.name' />
+                <input type="text" ng-model='item.price' />
+                <input type="text" ng-model='item.count' />
+                <span>Price: {{item.price * item.count}}</span>
+                <input ng-click='remove($index)' name='Remove' type="button"/>
+            </div>
+            <div>Items Count: {{items.length}}  Total price: {{TotalPrice()}}</div>
+            <div>
+                <input ng-model='newItem.name' />
+                <input ng-model='newItem.price' />
+                <input ng-click='add(newItem.name,newItem.price)'  type="button"/>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
