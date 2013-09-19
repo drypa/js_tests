@@ -16,7 +16,7 @@
                 <span>Price: {{item.price * item.count}}</span>
                 <input ng-click='remove($index)' name='Remove' type="button"/>
             </div>
-            <div>Items Count: {{items.length}}  Total price: {{TotalPrice()}}</div>
+            <div>Items Count: {{items.length}}  Total price: {{totalPrice()}}</div>
             <div>
                 <input ng-model='newItem.name' />
                 <input ng-model='newItem.price' />

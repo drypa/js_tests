@@ -11,14 +11,14 @@ appModule.controller('CartController', function ($scope) {
                  { name: 'name9', price: 2, count: 10 },
                  { name: 'name10', price: 2, count: 30 }
                  ];
-    $scope.TotalPrice = function () {
+    $scope.totalPrice = function () {
         for (var i = 0, len = $scope.items.length, res = 0; i < len; ++i) {
             (function () {
                 var item = $scope.items[i];
                 res += item.price * item.count;
             })();
-            return res;
         }
+        return res;
     }
     $scope.newItem = { name: 'sample name', price: 0, count: 1 };
     $scope.add = function (name, price) {
