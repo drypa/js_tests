@@ -20,6 +20,9 @@ appModule.controller('CartController', function ($scope) {
         }
         return res;
     }
+    $scope.customSubmit = function () {
+        alert('submit');
+    };
     $scope.newItem = { name: 'sample name', price: 0, count: 1 };
     $scope.add = function (name, price) {
         $scope.items.push({ name: name, price: price, count: 1 });
