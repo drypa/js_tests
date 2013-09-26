@@ -27,4 +27,7 @@ appModule.controller('CartController', function ($scope) {
     $scope.remove = function (index) {
         $scope.items.splice(index, 1);
     }
+    $scope.canAddItem = function(){
+        return $scope.newItem.name && $scope.newItem.price>0;
+    }
 });

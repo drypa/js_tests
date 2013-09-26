@@ -20,7 +20,7 @@
             <div>
                 <input ng-model='newItem.name' />
                 <input ng-model='newItem.price' />
-                <input ng-click='add(newItem.name,newItem.price)'  type="button"/>
+                <input ng-click='add(newItem.name,newItem.price)' ng-show='canAddItem()' type="button"/>
             </div>
         </div>
 
