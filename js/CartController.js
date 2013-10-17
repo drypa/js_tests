@@ -34,3 +34,8 @@ appModule.controller('CartController', function ($scope) {
         return $scope.newItem.name && $scope.newItem.price>0;
     }
 });
+appModule.filter('filterName',function(){
+    return function(input){
+        return input.toUpperCase();
+    };
+});
